@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reports · EduTrack</title>
+<link rel="stylesheet" href="../assets/css/global.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+<link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+
+<div id="layout-root">
+  <div id="layout-sidebar"></div>
+  <div id="layout-header"></div>
+  <main class="main-content" id="layout-main">
+    <div class="breadcrumbs">
+      <a href="dashboard.html">Administration</a> <span class="sep">/</span> <span>Reports</span>
+    </div>
+    <div class="page-header">
+      <div>
+        <div class="eyebrow">Administration Workspace</div>
+        <h1>Reports</h1>
+      </div>
+    </div>
+    <div id="page-content">
+      <div class="empty-state">
+        <span class="material-symbols-outlined">progress_activity</span>
+        <p>Loading…</p>
+      </div>
+    </div>
+    <div id="layout-footer-slot"></div>
+  </main>
+</div>
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/mock-data.js"></script>
+<script src="../assets/js/utils.js"></script>
+<script src="../assets/js/api.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script src="../assets/js/school.js"></script>
+<script src="../assets/js/router.js"></script>
+<script src="../assets/js/layout.js"></script>
+<script src="../assets/js/services/admin.service.js"></script>
+<script src="../assets/js/pages/admin.js"></script>
+<script>
+(function () {
+  const session = Router.requireRole(['admin']);
+  if (!session) return;
+  Layout.render('Reports').then(() => AdminPages.renderReports());
+})();
+</script>
+</body>
+</html>

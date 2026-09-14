@@ -1,0 +1,12 @@
+/* ==========================================================================
+   EduTrack — librarian.css
+   Role-specific tweaks only. Prefer shared styles in components.css /
+   dashboard.css — keep this file minimal.
+   ========================================================================== */
+
+.barcode-scan-input{ font-family: 'Courier New', monospace; letter-spacing: .05em; }
+.book-cover-placeholder{
+  width: 44px; height: 58px; border-radius: 4px; flex: none;
+  background: linear-gradient(135deg, var(--color-primary-soft), var(--color-primary));
+  display:flex; align-items:center; justify-content:center; color:#fff;
+}

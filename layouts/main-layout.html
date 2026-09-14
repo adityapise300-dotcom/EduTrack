@@ -1,0 +1,20 @@
+<!--
+  main-layout.html — reference snippet showing the placeholder structure
+  every protected page uses. See assets/js/layout.js for how it is filled.
+  Copy this shell into any new page.
+-->
+<div id="layout-root">
+  <div id="layout-sidebar"></div>
+  <div id="layout-header"></div>
+  <main class="main-content" id="layout-main">
+    <!-- page-specific content goes here -->
+    <div id="layout-footer-slot"></div>
+  </main>
+</div>
+
+<script>
+  // 1. Guard the page:
+  // Router.requireRole(["student"]);
+  // 2. Render the shared shell with a page title:
+  // Layout.render("Dashboard");
+</script>

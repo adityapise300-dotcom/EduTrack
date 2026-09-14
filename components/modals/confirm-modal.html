@@ -1,0 +1,14 @@
+<!-- confirm-modal.html — reusable confirmation dialog markup pattern -->
+<div class="modal-overlay" id="confirm-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Are you sure?</h3>
+      <button class="modal-close" data-close-modal><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <p>This action cannot be undone.</p>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" data-close-modal>Cancel</button>
+      <button class="btn btn-destructive" id="confirm-modal-ok">Yes, continue</button>
+    </div>
+  </div>
+</div>
